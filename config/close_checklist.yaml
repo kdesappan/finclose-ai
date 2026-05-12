@@ -1,0 +1,415 @@
+modules:
+
+  - name: GL & Journal Entries
+    items:
+      - id: GL-01
+        description: All recurring journals posted for the period
+        severity: BLOCK
+      - id: GL-02
+        description: All draft/journals approved and posted
+        severity: BLOCK
+      - id: GL-03
+        description: Trial balance debits equal credits
+        severity: BLOCK
+      - id: GL-04
+        description: No journals in draft/unposted status
+        severity: BLOCK
+      - id: GL-05
+        description: Intercompany journals balanced across entities
+        severity: BLOCK
+      - id: GL-06
+        description: Accrual journals posted for period-end expenses
+        severity: REVIEW
+      - id: GL-07
+        description: Prepayment amortisation journals posted
+        severity: REVIEW
+
+  - name: Accounts Payable
+    items:
+      - id: AP-01
+        description: AP subledger reconciled to GL control account
+        severity: BLOCK
+      - id: AP-02
+        description: All vendor invoices approved and posted
+        severity: BLOCK
+      - id: AP-03
+        description: No invoices pending matching to purchase orders
+        severity: REVIEW
+      - id: AP-04
+        description: Vendor aging report reviewed for overdue balances
+        severity: REVIEW
+      - id: AP-05
+        description: Payment runs completed and posted
+        severity: BLOCK
+      - id: AP-06
+        description: Unvouched receipts (GRNs) reviewed
+        severity: REVIEW
+      - id: AP-07
+        description: Vendor statements reconciliations completed for top 10 vendors
+        severity: REVIEW
+      - id: AP-08
+        description: Credit notes matched to original invoices
+        severity: FYI
+
+  - name: Accounts Receivable
+    items:
+      - id: AR-01
+        description: AR subledger reconciled to GL control account
+        severity: BLOCK
+      - id: AR-02
+        description: All customer invoices posted for the period
+        severity: BLOCK
+      - id: AR-03
+        description: Customer receipts applied and posted
+        severity: BLOCK
+      - id: AR-04
+        description: Bad debt provision reviewed and updated
+        severity: REVIEW
+      - id: AR-05
+        description: Customer aging report reviewed
+        severity: REVIEW
+      - id: AR-06
+        description: Unapplied customer payments investigated
+        severity: REVIEW
+      - id: AR-07
+        description: Credit limits reviewed for overdue customers
+        severity: FYI
+
+  - name: Cash & Bank Management
+    items:
+      - id: BANK-01
+        description: Bank reconciliation completed for all accounts
+        severity: BLOCK
+      - id: BANK-02
+        description: Unreconciled items older than 30 days investigated
+        severity: BLOCK
+      - id: BANK-03
+        description: Petty cash reconciled
+        severity: REVIEW
+      - id: BANK-04
+        description: Bank charges posted to GL
+        severity: REVIEW
+      - id: BANK-05
+        description: Outstanding cheques reviewed
+        severity: REVIEW
+      - id: BANK-06
+        description: Cash flow statements inputs validated
+        severity: FYI
+
+  - name: Fixed Assets
+    items:
+      - id: FA-01
+        description: Depreciation run completed for all asset books
+        severity: BLOCK
+      - id: FA-02
+        description: FA subledger reconciled to GL control account
+        severity: BLOCK
+      - id: FA-03
+        description: New asset acquisitions capitalised correctly
+        severity: BLOCK
+      - id: FA-04
+        description: Asset disposals and retirements posted
+        severity: BLOCK
+      - id: FA-05
+        description: Asset transfers between cost centres reviewed
+        severity: REVIEW
+      - id: FA-06
+        description: Capital work in progress (CWIP) reviewed
+        severity: REVIEW
+      - id: FA-07
+        description: Fully depreciated assets still in use flagged
+        severity: FYI
+
+  - name: Asset Leasing (IFRS 16)
+    items:
+      - id: LEASE-01
+        description: ROU asset depreciation posted for all leases
+        severity: BLOCK
+      - id: LEASE-02
+        description: Lease liability interest accrued and posted
+        severity: BLOCK
+      - id: LEASE-03
+        description: Lease payments applied to liability schedule
+        severity: BLOCK
+      - id: LEASE-04
+        description: New leases assessed and added to register
+        severity: REVIEW
+      - id: LEASE-05
+        description: Lease modifications reviewed and adjusted
+        severity: REVIEW
+      - id: LEASE-06
+        description: Lease terminations processed correctly
+        severity: REVIEW
+
+  - name: Project Management & Accounting
+    items:
+      - id: PMA-01
+        description: Project revenue recognised per contract terms
+        severity: BLOCK
+      - id: PMA-02
+        description: Project cost transactions posted and approved
+        severity: BLOCK
+      - id: PMA-03
+        description: WIP balances reviewed for completed milestones
+        severity: REVIEW
+      - id: PMA-04
+        description: Interproject cost allocations posted
+        severity: REVIEW
+      - id: PMA-05
+        description: Project invoices raised for billable-milestones
+        severity: REVIEW
+      - id: PMA-06
+        description: Timesheets approved and posted for the period
+        severity: FYI
+
+  - name: Expense Management (T&E)
+    items:
+      - id: TE-01
+        description: All expense reports approved and posted
+        severity: BLOCK
+      - id: TE-02
+        description: Corporate card transactions reconciled
+        severity: BLOCK
+      - id: TE-03
+        description: Expense accruals posted for unsubmitted claims
+        severity: REVIEW
+      - id: TE-04
+        description: Policy violations reviewed by management
+        severity: FYI
+      - id: TE-05
+        description: Events and entertainment expenses reviewed
+        severity: FYI
+
+  - name: Budgeting & Budget Control
+    items:
+      - id: BUD-01
+        description: Budget vs actual variance report reviewed
+        severity: REVIEW
+      - id: BUD-02
+        description: Budget overruns approved by budget owners
+        severity: REVIEW
+      - id: BUD-03
+        description: Budget transfers processed if required
+        severity: FYI
+      - id: BUD-04
+        description: Forecast updated for remaining periods
+        severity: FYI
+
+  - name: Revenue Recognition
+    items:
+      - id: REV-01
+        description: Revenue recognition schedules run for period
+        severity: BLOCK
+      - id: REV-02
+        description: Deferred revenue schedule reconciled to GL
+        severity: BLOCK
+      - id: REV-03
+        description: Contract modifications assessed for rev rec impact
+        severity: REVIEW
+      - id: REV-04
+        description: Performance obligations met and documented
+        severity: REVIEW
+      - id: REV-05
+        description: Revenue cut-off tested around period end
+        severity: BLOCK
+
+  - name: Foreign Currency Revaluation
+    items:
+      - id: FX-01
+        description: FX revaluation run for all foreign currency accounts
+        severity: BLOCK
+      - id: FX-02
+        description: FX gains/losses posted to correct GL accounts
+        severity: BLOCK
+      - id: FX-03
+        description: Exchange rates loaded for period-end date
+        severity: BLOCK
+      - id: FX-04
+        description: Translation adjustment posted for group reporting
+        severity: REVIEW
+
+  - name: Consolidation & Eliminations
+    items:
+      - id: CONS-01
+        description: Intercompany balances confirmed and agreed
+        severity: BLOCK
+      - id: CONS-02
+        description: Elimination journals posted for IC transactions
+        severity: BLOCK
+      - id: CONS-03
+        description: Goodwill and acquisition adjustments reviewed
+        severity: REVIEW
+      - id: CONS-04
+        description: Minority interest calculations updated
+        severity: REVIEW
+      - id: CONS-05
+        description: Group trial balance reviewed post-consolidation
+        severity: BLOCK
+
+  - name: Credit & Collections
+    items:
+      - id: CR-01
+        description: Overdue accounts reviewed with collections team
+        severity: REVIEW
+      - id: CR-02
+        description: Doubtful debt provision adequacy assessed
+        severity: REVIEW
+      - id: CR-03
+        description: Write-off approvals obtained and posted
+        severity: BLOCK
+      - id: CR-04
+        description: Collection forecast updated
+        severity: FYI
+
+  - name: Procurement & Sourcing
+    items:
+      - id: PROC-01
+        description: All GRNs matched to invoices or accruals
+        severity: BLOCK
+      - id: PROC-02
+        description: Open purchase orders reviewed for period-end accruals
+        severity: REVIEW
+      - id: PROC-03
+        description: Blanket order releases reviewed
+        severity: FYI
+      - id: PROC-04
+        description: Vendor rebate accruals posted
+        severity: REVIEW
+
+  - name: Sales & Order Management
+    items:
+      - id: SO-01
+        description: All shipped orders invoiced before period close
+        severity: BLOCK
+      - id: SO-02
+        description: Sales returns and credit notes processed
+        severity: REVIEW
+      - id: SO-03
+        description: Backorders reviewed for revenue cut-off
+        severity: REVIEW
+      - id: SO-04
+        description: Sales commissions accrued
+        severity: REVIEW
+
+  - name: Cost Accounting
+    items:
+      - id: COST-01
+        description: Cost allocations run for overhead pools
+        severity: BLOCK
+      - id: COST-02
+        description: Standard cost variances reviewed
+        severity: REVIEW
+      - id: COST-03
+        description: Cost centre reconciliation completed
+        severity: REVIEW
+      - id: COST-03
+        description: Absorption rates validated against actuals
+        severity: FYI
+
+  - name: Warehouse Management (WMS)
+    items:
+      - id: WMS-01
+        description: Inventory transactions posted and closed
+        severity: BLOCK
+      - id: WMS-02
+        description: Cycle count variances investigated and approved
+        severity: REVIEW
+      - id: WMS-03
+        description: Goods in transit reconciled
+        severity: REVIEW
+      - id: WMS-04
+        description: Slow-moving inventory provision reviewed
+        severity: FYI
+      - id: WMS-05
+        description: Inventory write-downs approved
+        severity: REVIEW
+
+  - name: Payroll & Benefits
+    items:
+      - id: PAY-01
+        description: Payroll journal posted to GL
+        severity: BLOCK
+      - id: PAY-02
+        description: Payroll reconciled to HR headcount
+        severity: BLOCK
+      - id: PAY-03
+        description: Social security and tax liabilities accrued
+        severity: BLOCK
+      - id: PAY-04
+        description: Bonus and commission accruals posted
+        severity: REVIEW
+      - id: PAY-05
+        description: Leave liability provision updated
+        severity: REVIEW
+
+  - name: Inventory & COGS
+    items:
+      - id: INV-01
+        description: Inventory subledger reconciled to GL
+        severity: BLOCK
+      - id: INV-02
+        description: COGS postings reviewed for accuracy
+        severity: BLOCK
+      - id: INV-03
+        description: Inventory write-downs approved and posted
+        severity: REVIEW
+      - id: INV-04
+        description: NRV assessment completed for period end
+        severity: REVIEW
+      - id: INV-05
+        description: Landed cost variances investigated
+        severity: FYI
+
+  - name: Compliance & Internal Controls
+    items:
+      - id: COMP-01
+        description: Segregation of duties exceptions reviewed
+        severity: REVIEW
+      - id: COMP-02
+        description: Journal entry approvals documented
+        severity: REVIEW
+      - id: COMP-03
+        description: Audit trail for manual overrides reviewed
+        severity: REVIEW
+      - id: COMP-04
+        description: User access review completed for period
+        severity: FYI
+
+  - name: Taxes
+    items:
+      - id: TAX-01
+        description: VAT/GST return reconciled to GL
+        severity: BLOCK
+      - id: TAX-02
+        description: Withholding tax calculated and posted
+        severity: BLOCK
+      - id: TAX-03
+        description: Deferred tax balances reviewed
+        severity: REVIEW
+      - id: TAX-04
+        description: Tax provision adequacy assessed
+        severity: REVIEW
+      - id: TAX-05
+        description: Transfer pricing adjustments posted
+        severity: FYI
+
+  - name: Miscellaneous
+    items:
+      - id: MISC-01
+        description: Period status set to restricted in D365
+        severity: BLOCK
+      - id: MISC-02
+        description: Financial statements generated and reviewed
+        severity: BLOCK
+      - id: MISC-03
+        description: Prior period adjustments approved by CFO
+        severity: BLOCK
+      - id: MISC-04
+        description: Management accounts pack prepared
+        severity: REVIEW
+      - id: MISC-05
+        description: Board reporting pack submitted
+        severity: FYI
+      - id: MISC-06
+        description: Close completion email sent to Finance Controllers
+        severity: FYI

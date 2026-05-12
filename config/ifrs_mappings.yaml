@@ -1,0 +1,103 @@
+statement_of_financial_position:
+  assets:
+    non_current:
+      - label: Property, Plant & Equipment
+        account_types: [FixedAsset]
+        gl_prefix: ["1100", "1110", "1120"]
+      - label: Right-of-Use Assets (IFRS 16)
+        account_types: [ROU]
+        gl_prefix: ["1130"]
+      - label: Intangible Assets
+        account_types: [Intangible]
+        gl_prefix: ["1200", "1210"]
+      - label: Goodwill
+        account_types: [Goodwill]
+        gl_prefix: ["1220"]
+      - label: Long-term Investments
+        account_types: [Investment]
+        gl_prefix: ["1300"]
+    current:
+      - label: Inventories
+        account_types: [Inventory]
+        gl_prefix: ["1400", "1410"]
+      - label: Trade & Other Receivables
+        account_types: [Receivable]
+        gl_prefix: ["1500", "1510"]
+      - label: Cash & Cash Equivalents
+        account_types: [Bank, Cash]
+        gl_prefix: ["1600", "1610"]
+      - label: Prepayments
+        account_types: [Prepayment]
+        gl_prefix: ["1700"]
+
+  liabilities:
+    non_current:
+      - label: Long-term Borrowings
+        account_types: [LongTermDebt]
+        gl_prefix: ["2100"]
+      - label: Lease Liabilities (IFRS 16)
+        account_types: [LeaseLiability]
+        gl_prefix: ["2110"]
+      - label: Deferred Tax Liabilities
+        account_types: [DeferredTax]
+        gl_prefix: ["2200"]
+    current:
+      - label: Trade & Other Payables
+        account_types: [Payable]
+        gl_prefix: ["2300", "2310"]
+      - label: Short-term Borrowings
+        account_types: [ShortTermDebt]
+        gl_prefix: ["2400"]
+      - label: Tax Liabilities
+        account_types: [TaxPayable]
+        gl_prefix: ["2500"]
+      - label: Accruals
+        account_types: [Accrual]
+        gl_prefix: ["2600"]
+
+  equity:
+    - label: Share Capital
+      gl_prefix: ["3100"]
+    - label: Retained Earnings
+      gl_prefix: ["3200"]
+    - label: Other Reserves
+      gl_prefix: ["3300"]
+
+profit_and_loss:
+  revenue:
+    - label: Revenue from Contracts with Customers
+      gl_prefix: ["4100", "4110"]
+    - label: Other Operating Income
+      gl_prefix: ["4200"]
+
+  cost_of_sales:
+    - label: Cost of Goods Sold
+      gl_prefix: ["5100"]
+    - label: Direct Labour
+      gl_prefix: ["5200"]
+    - label: Overhead Absorption
+      gl_prefix: ["5300"]
+
+  operating_expenses:
+    - label: Selling & Distribution
+      gl_prefix: ["6100"]
+    - label: General & Administrative
+      gl_prefix: ["6200"]
+    - label: Depreciation & Amortization
+      gl_prefix: ["6300"]
+    - label: Employee Benefits
+      gl_prefix: ["6400"]
+
+  finance:
+    - label: Finance Income
+      gl_prefix: ["7100"]
+    - label: Finance Costs
+      gl_prefix: ["7200"]
+    - label: FX Gains / (Losses)
+      gl_prefix: ["7300"]
+
+  tax:
+    - label: Income Tax Expense
+      gl_prefix: ["8100"]
+    - label: Deferred Tax Movement
+      gl_prefix: ["8200"]

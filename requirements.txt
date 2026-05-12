@@ -1,0 +1,9 @@
+# Microsoft Agent Framework
+azure-identity
+pandas
+openpyxl
+requests
+python-dotenv
+pyyaml
+pytest
+pytest-asyncio
