@@ -25,14 +25,14 @@ def agent():
         "D365_CLIENT_ID": "test-client",
         "D365_CLIENT_SECRET": "test-secret",
         "D365_TENANT_ID": "test-tenant",
-        "D365_COMPANY_ID": "USMF",
+        "D365_COMPANY_ID": "2014",
     }):
-        return DataAgent(period="2026-04", company="USMF")
+        return DataAgent(period="2026-04", company="2014")
 
 
 def test_agent_initialization(agent):
     assert agent.period == "2026-04"
-    assert agent.company == "USMF"
+    assert agent.company == "2014"
 
 
 @patch("agents.data_agent.DataAgent._extract_gl")

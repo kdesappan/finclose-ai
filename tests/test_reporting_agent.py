@@ -20,7 +20,7 @@ SAMPLE_RESULTS = [
 
 @pytest.fixture
 def agent(tmp_path):
-    a = ReportingAgent(period="2026-04", company="USMF")
+    a = ReportingAgent(period="2026-04", company="2014")
     a.output_dir = str(tmp_path)
     return a
 
@@ -40,7 +40,7 @@ def erp_data():
 async def test_generate_report_creates_file(agent, erp_data):
     path = await agent.generate_report(erp_data, SAMPLE_RESULTS)
     assert os.path.exists(path)
-    assert path.endswith("USMF_2026-04_close_report.xlsx")
+    assert path.endswith("2014_2026-04_close_report.xlsx")
 
 
 @pytest.mark.asyncio
@@ -54,5 +54,5 @@ async def test_generate_report_file_contents(agent, erp_data):
 @pytest.mark.asyncio
 async def test_generate_report_filename_includes_period_and_company(agent, erp_data):
     path = await agent.generate_report(erp_data, SAMPLE_RESULTS)
-    assert "USMF" in path
+    assert "2014" in path
     assert "2026-04" in path
