@@ -11,7 +11,7 @@ def create_upload_payload():
     # Sample data structure
     payload = {
         "metadata": {
-            "company": "USMF",
+            "company": "2014",
             "period": "2026-04",
             "upload_type": "close_data",
             "timestamp": "2026-05-12T10:00:00Z"
