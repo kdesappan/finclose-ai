@@ -37,6 +37,10 @@ import os
 import json
 import base64
 from typing import Dict, List, Any
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from agents.orchestrator_agent import OrchestratorAgent
 from agents.data_agent import DataAgent
 from agents.validation_agent import ValidationAgent
