@@ -12,12 +12,12 @@ from semantic_kernel.functions import kernel_function
 from typing import Annotated
 
 TEAL = "FF00D2A9"
-DARK = "FF2A3D5"
-WHITE = "FFFFFF"
+DARK = "FF2A3D55"
+WHITE = "FFFFFFFF"
 GREY = "FFF5F5F5"
 RED = "FFFF0000"
 AMBER = "FFFFBF00"
-GREEN = "FF00A55"
+GREEN = "FF00A555"
 
 
 class ExcelPlugin:
@@ -108,7 +108,7 @@ class ExcelPlugin:
             cell.font = Font(bold=True, color=self._severity_color(r.get("severity", "")))
 
     def _build_full_checklist(self, wb: Workbook, results: list):
-        ws = wb.create_sheet("Full Checklist")
+        ws = wb.create_sheet("Validation Results")
         ws.column_dimensions["A"].width = 20
         ws.column_dimensions["B"].width = 55
         ws.column_dimensions["C"].width = 14

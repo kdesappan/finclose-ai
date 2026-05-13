@@ -40,7 +40,7 @@ def test_agent_initialization(agent):
 @patch("agents.data_agent.DataAgent._extract_ar")
 @patch("agents.data_agent.DataAgent._extract_fa")
 @patch("agents.data_agent.DataAgent._extract_bank")
-pytest.mark.asyncio
+@pytest.mark.asyncio
 async def test_extract_data_success(mock_bank, mock_fa, mock_ar, mock_ap, mock_gl, agent):
     mock_gl.return_value = pd.DataFrame(SAMPLE_GL)
     mock_ap.return_value = pd.DataFrame(SAMPLE_AP)
@@ -57,7 +57,7 @@ async def test_extract_data_success(mock_bank, mock_fa, mock_ar, mock_ap, mock_g
 
 
 @patch("agents.data_agent.DataAgent._extract_gl")
-pytest.mark.asyncio
+@pytest.mark.asyncio
 async def test_extract_data_with_exception(mock_gl, agent):
     mock_gl.side_effect = Exception("API Error")
 

@@ -82,11 +82,19 @@ python main.py
 
 ### Tests
 
-Run tests with:
+Run the project test suite with:
 
 ```bash
-pytest tests/
+python -m pytest -v tests/
 ```
+
+If `pytest` is not on your PATH, use the Python executable directly:
+
+```bash
+C:/Users/karthik.desappan/AppData/Local/Python/pythoncore-3.14-64/python.exe -m pytest -v tests/
+```
+
+The `pytest.ini` file is configured to only collect tests from the `tests/` folder.
 
 ## API Reference
 
