@@ -105,7 +105,7 @@ async def main():
     """
     # Configuration
     PERIOD = os.getenv("CLOSE_PERIOD", "2026-04")
-    COMPANY = os.getenv("COMPANY_ID", "USMF")
+    COMPANY = os.getenv("COMPANY_ID", "2014")
     
     print(f"FinClose AI - Starting autonomous close for {COMPANY} - {PERIOD}")
     
